@@ -77,7 +77,7 @@
 	function run(){
 		$('.btn').button();
 		$('#addActBtn').click(function() {
-			window.location= '/addActivity';
+			window.location= '/addActivity2';
 		});
 		$('#back').click(function() {
 			//window.history.back();		
@@ -99,7 +99,7 @@
 			var str = name.split("_");
 			localStorage.setItem('editBtnID', this.id);
 			localStorage.setItem('actName_edit', str[0]);
-			window.location='/editActivity';	
+			window.location='/editActivity2';	
 		});
 	}
     </script>
