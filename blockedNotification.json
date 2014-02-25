@@ -1,0 +1,34 @@
+{
+	"blocknotifications": [
+		{
+			"name": "Chicken Pot Pie",
+			"blocked": "Phone call: ",
+			"time": "10 minutes ago"			
+		},
+		{
+			"name": "Pancakes a syrup",
+			"blocked": "Phone call: ",
+			"time": "20 minutes ago"			
+		},
+		{
+			"name": "Korean BBQ",
+			"blocked": "Text message: ",
+			"time": "40 minutes ago"			
+		},
+		{
+			"name": "Sushi",
+			"blocked": "Email message: ",
+			"time": "40 minutes ago"			
+		},
+		{
+			"name": "Popeyes Fried Chicken",
+			"blocked": "Email message: ",
+			"time": "53 minutes ago"			
+		},
+		{
+			"name": "Ice cream sandwich",
+			"blocked": "Facebook Message: ",
+			"time": "60 minutes ago"
+		}
+	]
+}

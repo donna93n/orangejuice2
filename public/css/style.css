@@ -1,0 +1,295 @@
+h1{
+    font-size: 35px;
+	/*float: left; */
+	text-align: center;
+}
+ h2{
+	padding-top: 20px;
+	font-size: 35px;
+	padding-bottom: 20px;
+	text-align: center;
+ }
+ 
+#selectActTitle, #tmpTitle{
+	font-size: 25px;
+}
+
+.text{
+    font-size: 20px;
+	margin-top: 10px;
+}
+
+.smText{
+	font-size: 20px;
+}
+
+#title-bar{
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+	width:100%;
+}
+
+.imgBtn{
+	cursor: pointer;
+}
+
+#header{
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+p{
+    padding-top: 10px; 
+    padding-bottom: 5px; 
+    padding-right: 20px;
+}
+
+.pNotification{
+    padding-top: 0px; 
+    padding-bottom: 0px; 
+    padding-right: 0px;
+    line-height: 20px;
+}
+
+#switchContainer{
+	float: right;
+	height: 30px;
+	margin-top: 10px;
+}
+
+#selectActBtn{
+    margin-top: 5px;
+    clear: both;
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#selectBtnContainer{
+	clear: both;
+	text-align: center;
+}
+
+#offBtn{
+	width: 40px;
+    height: 30px;
+    padding-bottom: 5px;
+	margin-top: auto;
+}
+
+#menuBtn{
+    width: 40px;
+    height: 30px;
+    padding-bottom: 5px;
+	margin-top: auto;
+	float: right;
+}
+
+.menuCol{
+	width: 40px;
+}
+
+#homepg{
+	width: 100%;
+	clear:both;
+}
+
+body{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: url('../img/wrinkledpaper.jpg');
+}
+
+
+#curActLabel{
+	/*float: left; */
+}
+
+#curAct{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#curAct{
+	float: left; 
+	font-weight: bold;
+}
+
+#back{
+	float:left;
+	width: 15px;
+	height: 25px;
+	margin-top: auto;
+	
+}
+
+.wideBtn, #doneBtn, #notifLink{
+	width: 280px;
+}
+
+.wideBoxes{
+	width: 95%;
+}
+
+h2{
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+.activities{
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.activityBtn{
+	float: left;
+	width: 200px;
+}
+
+
+#form-label{
+	margin-right: 5px; 
+}
+
+#actName{
+	width: 65%; 
+	float: right;
+	margin-bottom: 15px;
+	font-size: 17px;
+}
+
+.editBtn{
+	float: right; 
+	width: 60px;
+	height: 40px;
+}
+
+.labels{
+	float: left;
+}
+
+.editBtn{
+	float: right; 
+}
+
+.formBtn{
+	width: 42%;
+}
+
+.cancelBtn, .deleteBtn{
+	float: left;
+	margin-left: 20px;
+	
+}
+
+.saveBtn{
+	float: right; 
+	margin-right: 20px;
+	
+}
+
+.bottomrow{
+	width: 100%;
+	clear: both; 
+	position: absolute; 
+	bottom: 10px;
+	left: 0px;
+}
+
+#email, #pw, #Name{
+	height: 25px;
+	font-size: 15px;
+}
+
+#loginpg, #signuppg{
+	width:100%;
+	text-align: center;
+}
+
+.loginpgBtn{
+	width: 100px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#loginBtnRow{
+	width: 100%;
+	text-align: center; 
+}
+
+#login, #submitSignup{
+	margin-right:10px;
+}
+
+#signup, #cancelSignup{
+	margin-left: 10px;
+}	
+
+#Name{
+	margin-bottom: 20px;
+}
+
+#email{
+	margin-bottom: 10px;
+}
+
+#pw{
+	margin-top: 10px;
+}
+
+#signupForm{
+	margin-bottom: 0px;
+}
+
+.menu{
+	float:right;
+}
+
+li{
+	font-size: 20px;
+	heigth: 30px; 
+}
+
+.contactNames, .appNames{
+	font-size: 20px;
+	margin-top: auto;
+	margin-bottom: auto; 
+}
+
+#searchbar{
+	width: 95%; 
+}
+
+#checkboxes{
+	width: 25px; 
+	height: 25px;
+	float:right;
+}
+
+
+.instr{
+	padding-top: 0px; 
+	padding-bottom: 0px;
+	/*text-align: center;*/
+}
+
+#logo{
+	margin-top:60px;
+	margin-bottom:60px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#contactsTab{
+	width: 48%;
+	text-align: center; 
+}
+
+#appsTab{
+	width: 52%;
+	float:right;
+}
+

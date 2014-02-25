@@ -1,0 +1,44 @@
+h1{
+    font-size: 50px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+
+.text{
+    font-size: 20px;
+}
+.title{
+    padding-right:10px;
+}
+
+p{
+    padding-top: 10px; 
+    padding-bottom: 5px; 
+    padding-right: 20px;
+}
+
+#selectActBtn{
+    /*margin-left: 15px;
+    width: 195px;*/
+    margin-top: 5px;
+    clear: both;
+}
+
+#notif{
+}
+
+#helpBtn{
+    width: 40px;
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+#homepg{
+	width: 100%;
+}
+
+body{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}

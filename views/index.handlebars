@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap-switch.css">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body onload="run()">
+	<!--<div id="title-bar">
+	<table id="header"> <tr> 
+		<td>
+	    <h1>Study App</h1>
+		</td>
+		<td>
+	    <button class="btn" id="helpBtn" onclick="window.location='help.html'">
+			<i class="icon-question-sign"></i>
+		</button>
+	</td></tr></table>
+	</div>-->
+	
+	<div id="title-bar">
+		<table style="width:100%">
+			<tr>
+			<td>
+				<!--<div id="backContainer">
+				<img id="back" class="imgBtn" onclick="window.location='activity.html'" src="img/chevron-left.png"/>
+				</div>-->
+			</td>
+			
+			<td class="title">
+				<h1>Home</h1>
+			</td>
+				
+			<td class="menuCol">
+				<div class="btn-group menu">
+				<button class="btn"  data-toggle="dropdown" id="menuBtn">
+				<i class="icon-th-list"></i>
+				</button>
+					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+						<li><a tabindex="-1" href="/">Home</a></li>
+						<li><a tabindex="-1" href="/help">Help</a></li>
+						<li><a tabindex="-1" href="/login">Sign out</a></li>
+					 </ul>
+				</div>
+				
+			</td>
+			</tr>
+		</table>
+	
+	</div>
+	
+	
+
+	<div id="homepg">
+		<!--<p style="float:left;" class="text">Focus Mode</p>
+			<div id="switchContainer">
+				<input type="checkbox" id="switch" data-animated="false" data-on="success" data-off="danger">
+			</div>-->
+		<div id="selectBtnContainer">
+		<button id="selectActBtn" class="btn btn-large text wideBtn">Select Activity</button>
+		</div>
+
+		<div style="clear: both; text-align: center;">
+	    <!--<a class="text" id="notifLink" href="/blockednotifications">See Blocked Notifcations</a>-->
+		<button id="notifLink" class="btn btn-large text">See Blocked Notifications</button>
+		</div>
+		
+		<p class="text"id="curActLabel">Current Activity: {{session.currAct}} </p>
+		<p class="text" id="curAct"></p>
+		
+		<div class="bottomrow" style="text-align: center;">
+			<button id="doneBtn" class="btn btn-success btn-large">I'm Done!</button>
+		</div>
+	</div>
+
+
+    <script type="text/javascript">
+	function run(){
+		$('.btn').button();
+		$('#selectActBtn').click(function() {
+			window.location= '/activity';
+		});
+		
+		$("#notifLink").click(function(){
+			window.location='/blockednotifications';
+		});
+		
+		var activityName = localStorage.getItem('activityName');
+		if(activityName == null)
+		{
+			activityName = "None";
+			$("#notifLink").css("display", "none");
+			$("#doneBtn").hide(); 
+		}
+		else{
+			$("#selectActBtn").text("Change Activity");
+			//$("#doneBtn").hide(); 
+		}
+		$("#curAct").text(activityName);
+		
+		$("#doneBtn").click(function() {
+			localStorage.removeItem('activityName');
+			$("#notifLink").css("display", "none");
+			$("#selectActBtn").text("Select Activity");
+			$("#curAct").text("None");
+			$("#doneBtn").hide(); 
+			
+		});
+		
+		/*
+		$("#switch").bootstrapSwitch();
+		
+		if(!document.getElementById("switch").checked){
+			$("#curAct").text("None");
+		}
+		
+		//event handler 
+		$("#switch").on('switch-change',function(e,data){
+			console.log("pressed");
+			var on = data.value; 
+			
+			if(on){
+				$("#notifLink").css("display", "inline");
+				//$("#curAct").text("Some Activity");
+			}
+			else{
+				$("#notifLink").css("display", "none");
+				$("#curAct").text("None");
+			}
+		});
+		
+		var state = $('#switch').bootstrapSwitch('state');
+		console.log(state);
+		if (state){
+			console.log("tis on");
+			$("#notifLink").css("display", "inline");
+			$("#curAct").text("None");
+		}
+		else{
+			$("#notifLink").css("display", "none");
+			$("#curAct").text("None");
+		}*/
+	}
+	
+
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+</body>
+
+</html>

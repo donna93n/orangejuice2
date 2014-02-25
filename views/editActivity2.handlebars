@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap-switch.css">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body onload="run()">
+	<div id="title-bar">
+		<!--<div id="backContainer">
+			<img id="back" class="imgBtn" onclick="window.location='activity.html'" src="img/chevron-left.png"/>
+		</div>
+	<table id="header"> <tr>
+		<td>
+	    <h1>Add Activity</h1>
+		</td>
+		<td>
+	    <button class="btn" id="menuBtn" onclick="window.location='help.html'">
+			<i class="icon-question-sign"></i>
+		</button>
+		</td>
+	</tr></table>-->
+	
+		<table style="width:100%">
+			<tr>
+			<td>
+				<div id="backContainer">
+				<img id="back" class="imgBtn" onclick="window.location='/activity'" src="img/chevron-left.png"/>
+				</div>
+			</td>
+			
+			<td class="title">
+				<h1>Edit Activity</h1>
+			</td>
+				
+			<td class="menuCol">
+				<div class="btn-group menu">
+				<button class="btn"  data-toggle="dropdown" id="menuBtn">
+				<i class="icon-th-list"></i>
+				</button>
+					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+						<li><a tabindex="-1" href="/">Home</a></li>
+						<li><a tabindex="-1" href="/help">Help</a></li>
+						<li><a tabindex="-1" href="/login">Sign out</a></li>
+					 </ul>
+				</div>
+				
+			</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="addpg" style="clear:both;">
+		<form class="form-horizontal" role="form" method = "get" action = "/addAct">
+			<div class="form-group">
+				<label id="form-label" for="actName" class="col-sm-2 control-label smText">Activity:</label>
+				<div class="col-sm-10">
+					<input type="text" maxlength="20" class="form-control" id="actName" placeholder="Enter activity name">
+				</div>
+			</div>
+			<!--<div class="input-group input-group-lg">
+				<input type="text" class="form-control input-lg" placeholder="efsg">
+			</div>-->
+			<div class="bottomrow">
+				<button id="delete" class="btn btn-default btn-large formBtn deleteBtn">Delete</button>
+				<button class="btn btn-primary btn-large formBtn saveBtn">Save</button>
+			</div>
+		</form>
+
+		<!--
+		<div style="width: 100%; clear: both;">
+			<p class="labels smText">Allowed Contacts</p>
+			<button id="editContacts" class="btn btn-default editBtn">Edit</button>
+		</div>
+		
+		<div style="width: 100%; clear:both; padding-top:10px;">
+			<p class="labels smText">Blocked Apps</p>
+			<button id="editApps" class="btn btn-default editBtn">Edit</button>
+		</div>-->
+		
+		<div style="width:100%; clear: both; align="center";">
+		<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+		 	<li id="contactsTab" class="active"><a href="#Contacts" data-toggle="tab">Contacts</a></li>
+			<li id="appsTab" class="active2"><a href="#SocialMedia" data-toggle="tab">Social Media</a></li>
+			</ul>
+
+		<!-- Tab panes -->
+			<div class="tab-content">
+			  <div class="tab-pane active" id="Contacts">
+	<div id="contactspg" style="clear:both;">
+		<!--<div style="width: 100%;">
+			<input id="searchbar" type="text" autocomplete="off" data-provide="typeahead" placeholder="Search Contacts">
+		</div>-->
+		<p class="instr">Select contacts to allow calls/texts from</p>
+		<table id="contactsList" style="width: 100%;">
+		
+		{{#each contacts}}
+		<tr>
+		<td>
+			<p class="contactNames">{{name}}</p>
+		</td>
+		<td>
+			<div style="float: right;" class="btn-group" data-toggle="buttons-checkbox">
+			  <button type="button" class="btn">
+				<img src="img/call icon.png"/>
+			  </button>
+			  <button type="button" class="btn">
+				<i class="icon-comment"></i>
+			  </button>
+			</div>
+		</td>
+		
+		</tr>
+		{{/each}}
+		
+		</table>
+		
+		<div class="bottomrow">
+			<button id="cancel" class="btn btn-default btn-large formBtn cancelBtn">Cancel</button>
+			<button class="btn btn-primary btn-large formBtn saveBtn">Save</button>
+		</div>
+	</div>
+</div>
+
+
+		<div class="tab-pane active2" id="SocialMedia">	<div id="contactspg" style="clear:both;">
+		<p class="instr">Select apps to block</p>
+		<table id="contactsList" style="width: 100%;">
+		{{#each apps}}
+		<tr>
+		<td>
+			<p class="appNames">{{appName}}</p>
+		</td>
+		<td>
+			<label class="checkbox">
+			  <input id="checkboxes" type="checkbox" value="">  
+			</label>
+		</td>
+		
+		</tr>
+		{{/each}}
+		</table>
+		
+		<div class="bottomrow">
+			<button id="cancel" class="btn btn-default btn-large formBtn cancelBtn">Cancel</button>
+			<button class="btn btn-primary btn-large formBtn saveBtn">Save</button>
+		</div>
+	</div></div>
+		  	</div>
+		</div>		
+	
+	</div>
+
+
+    <script type="text/javascript">
+	function run(){
+		$('.btn').button();
+		$('.deleteBtn').click(function() {
+			window.location= '/activity';
+		});
+		
+		$('#editContacts').click(function() {
+			window.location= '/contacts';
+		});
+		
+		$('#editApps').click(function() {
+			window.location= '/apps';
+		});
+		
+		$('.saveBtn').click(function() {
+			window.location= '/activity';
+		});
+		$('.cancelBtn').click(function() {
+			window.location= '/activity';
+		});
+
+		$('#myTab a[href="#status"]').click(function (e) {
+         		e.preventDefault();
+         		$(this).tab('show');
+        		$('#status').load('status.html');
+   		});
+
+
+		var currentName = localStorage.getItem('actName_edit'); 
+		document.getElementById('actName').value=currentName; 
+		
+	}
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+</body>
+
+</html>

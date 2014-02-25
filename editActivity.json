@@ -1,0 +1,30 @@
+{
+	"apps": [
+		{
+			"appName": "Facebook"
+		},
+		{
+			"appName": "Gmail"
+		},
+		{
+			"appName": "Snapchat"
+		}
+	],
+
+	"contacts": [
+		{
+			"name": "Bob"
+		},
+		{
+			"name": "Dave"
+		},
+		{
+			"name": "Drug Dealer"
+		},
+		{
+			"name": "Mom"
+		}
+		
+	]
+}
+

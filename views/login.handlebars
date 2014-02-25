@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap-switch.css">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body onload="run()">
+	<div id="logo">
+		<img src= "img/OrangeJuice logo (black text).png" alt= "OrangeJuice logo" />
+	</div>
+	
+	<div id="loginpg">
+	
+		<form>
+		<fieldset>
+			
+			<div>
+				<input type="email" class="wideBoxes" id="email" placeholder="Email">
+			</div>
+			<div>
+				<input type="password" class="wideBoxes" id="pw" placeholder="Password">
+			</div>
+			
+			<div id="loginBtnRow">
+				<button class="loginpgBtn btn btn-large" id="login" type="button">Login</button>
+				<button class="loginpgBtn btn btn-large" id="signup" type="button">Signup</button>
+			</div>
+			
+		</fieldset>
+		</form>
+
+		<a id="pwlink" href="#">Forgot Password</a>
+	</div>
+
+    <script type="text/javascript">
+	function run(){
+		$('.btn').button();
+		$('#login').click(function() {
+			if (email.value === "" || pw.value === "")
+			{
+				alert("Please enter in a email and password");
+			}
+			else if ((email.value).search("@") == -1)
+			{
+				alert("Please enter a valid email address");
+			}
+			else{
+			window.location= '/';
+			}
+		});
+		
+		$('#signup').click(function() {
+			window.location= '/signup';
+		});
+		
+		$('#pwlink').click(function() {
+			alert("Your password has been sent your email.");
+		});
+	}
+	
+	
+
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+var models = require('../models');
+
+exports.view = function(req, res){
+	res.render('editActivity');
+}
+
+exports.deleteActivity = function (req,res){
+	var data = req.body;
+	console.log("PRINTING REQ.BODY")
+	console.log(data);
+
+	models.Activities
+		.find({"name": data.name})
+		.remove()
+		.exec(afterDelete);
+
+	function afterDelete(err){
+		if(err)
+			console.log(err); 
+
+		res.send();
+		res.redirect('/editActivity'); 
+	}
+}
+
+exports.update = function (req, res){
+	var data = req.body;
+
+	console.log("OLD NAME: "+ data.oldname);
+	console.log("NEW NAME: "+ data.newname);
+
+	models.Activities
+		//.find({"name": "Studying"})
+		.update({"name": "Studying"}, {"name": "dfgfd"})
+		.exec(afterUpdating);
+
+	function afterUpdating(err){
+		if(err){
+			console.log("ERRORRRRR");
+			console.log(err);
+		}
+		console.log("should be done updating");
+		res.send();
+		res.redirect('/editActivity');
+	}
+}

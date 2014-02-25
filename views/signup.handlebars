@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap-switch.css">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body onload="run()">
+	<div id="title-bar">
+		<table style="width:100%">
+			<tr>
+			<td>
+				<div id="backContainer">
+				<img id="back" class="imgBtn" src="img/chevron-left.png"/>
+				</div>
+			</td>
+			
+			<td class="title">
+				<h1>Sign up</h1>
+			</td>
+				
+			<td class="menuCol">
+				
+			</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="signuppg">
+	
+		<form id="signupForm" ACTION = "" METHOD = "GET">
+		<fieldset>
+			
+			<div>
+				<input type="text" class="wideBoxes" id="Name" placeholder="Name">
+			</div>
+			
+			<div>
+				<input type="email" class="wideBoxes" id="email" placeholder="Email">
+			</div>
+			<div>
+				<input type="password" class="wideBoxes" id="pw" placeholder="Password">
+			</div>
+			
+		</fieldset>
+		</form>
+		
+		<div id="loginBtnRow">
+			<button class="loginpgBtn btn btn-large" id="submitSignup" type="button">Submit</button>
+			<button class="loginpgBtn btn btn-large" id="cancelSignup" type="button">Cancel</button>
+		</div>
+
+	</div>
+
+    <script type="text/javascript">
+	function run(){
+		$('.btn').button();
+
+		$('#back').click(function() {
+			window.history.back(); 
+		})
+		$('#submitSignup').click(function() {
+			if (Name.value === "" || email.value === "" || pw.value === "")
+			{
+				alert("Please enter in a name, email, and password");
+			}
+			else if ((email.value).search("@") == -1)
+			{
+				alert("Please enter a valid email");
+			}
+			else{
+			window.location= '/';
+			}
+		});
+		
+		$('#cancelSignup').click(function() {
+			window.location= '/login';
+		});
+		
+	}
+	
+	
+
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+</body>
+
+</html>

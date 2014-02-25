@@ -1,0 +1,13 @@
+{
+	"apps": [
+		{
+			"appName": "Facebook"
+		},
+		{
+			"appName": "Gmail"
+		},
+		{
+			"appName": "Snapchat"
+		}
+	]
+}
