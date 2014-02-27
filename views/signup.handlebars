@@ -45,6 +45,11 @@
 			<div>
 				<input type="password" class="wideBoxes" id="pw" placeholder="Password">
 			</div>
+			<div>
+				<label class="checkbox">
+				  <input id="agreement" type="checkbox"> I allow this site to access and sync my contacts and list of installed apps.
+				</label>
+			</div>
 			
 		</fieldset>
 		</form>
@@ -71,6 +76,9 @@
 			else if ((email.value).search("@") == -1)
 			{
 				alert("Please enter a valid email");
+			}
+			else if(!document.getElementById('agreement').checked){
+				alert("Please agree to terms");
 			}
 			else{
 			window.location= '/';

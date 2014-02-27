@@ -60,17 +60,16 @@
 			<div id="switchContainer">
 				<input type="checkbox" id="switch" data-animated="false" data-on="success" data-off="danger">
 			</div>-->
+		<p class="text"id="curActLabel">Current Activity: {{session.currAct}} </p>
+		<p class="text" id="curAct"></p>
+			
 		<div id="selectBtnContainer">
 		<button id="selectActBtn" class="btn btn-large text wideBtn">Select Activity</button>
 		</div>
 
 		<div style="clear: both; text-align: center;">
-	    <!--<a class="text" id="notifLink" href="/blockednotifications">See Blocked Notifcations</a>-->
-		<button id="notifLink" class="btn btn-large text">See Blocked Notifications</button>
+		<!--<button id="notifLink" class="btn btn-large text">See Blocked Notifications</button>-->
 		</div>
-		
-		<p class="text"id="curActLabel">Current Activity: {{session.currAct}} </p>
-		<p class="text" id="curAct"></p>
 		
 		<div class="bottomrow" style="text-align: center;">
 			<button id="doneBtn" class="btn btn-success btn-large">I'm Done!</button>
@@ -81,6 +80,7 @@
     <script type="text/javascript">
 	function run(){
 		$('.btn').button();
+		
 		$('#selectActBtn').click(function() {
 			window.location= '/activity';
 		});
@@ -93,22 +93,24 @@
 		if(activityName == null)
 		{
 			activityName = "None";
-			$("#notifLink").css("display", "none");
+			//$("#notifLink").css("display", "none");
 			$("#doneBtn").hide(); 
 		}
 		else{
-			$("#selectActBtn").text("Change Activity");
+			//$("#selectActBtn").text("Change Activity");
+			$("#selectActBtn").css("display", "none");
 			//$("#doneBtn").hide(); 
 		}
 		$("#curAct").text(activityName);
 		
 		$("#doneBtn").click(function() {
+			window.location='/blockednotifications';
 			localStorage.removeItem('activityName');
-			$("#notifLink").css("display", "none");
-			$("#selectActBtn").text("Select Activity");
+			/*$("#notifLink").css("display", "none");
+			//$("#selectActBtn").text("Select Activity");
+			$("#selectActBtn").css("display", "inline");
 			$("#curAct").text("None");
-			$("#doneBtn").hide(); 
-			
+			$("#doneBtn").hide(); */
 		});
 		
 		/*
