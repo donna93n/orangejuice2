@@ -250,7 +250,15 @@ h2{
 
 li{
 	font-size: 20px;
-	heigth: 30px; 
+	height: 30px; 
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#contactsTab, #appsTab{
+	margin-top: 0px;
+	margin-bottom: 0px; 
+	height: auto; 
 }
 
 .contactNames, .appNames{
@@ -291,5 +299,10 @@ li{
 #appsTab{
 	width: 52%;
 	float:right;
+}
+
+#agreement{
+	width: 20px; 
+	height: 20px;
 }
 
