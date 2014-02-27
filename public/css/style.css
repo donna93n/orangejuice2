@@ -194,7 +194,7 @@ h2{
 .bottomrow{
 	width: 100%;
 	clear: both; 
-	position: absolute; 
+	position: fixed; 
 	bottom: 10px;
 	left: 0px;
 }
