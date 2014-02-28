@@ -188,7 +188,8 @@
 		var currentName = localStorage.getItem('actName_edit'); 
 		document.getElementById('actName').value=currentName; 
 		
-		var height = screen.availHeight - 390; 
+		var height = $(window).height - 390; 
+		//console.log(height);
 		$('.tab-pane').css("height", height+"px");
 		
 	}
